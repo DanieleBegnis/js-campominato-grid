@@ -7,4 +7,26 @@
 const mainGrid = document.querySelector('#grid');
 console.log(mainGrid);
 
-//creo la griglia
+//creo la griglia facendo un ciclo 100 volte e appendendo alla griglia dei quadrati
+
+for(let i = 1; i <= 100; i++) {
+    const newSquare = generateSquare(i);
+    mainGrid.append(newSquare);
+}
+
+
+
+//funzione che crea un quadrato
+function generateSquare(number) {
+    const newSquare = document.createElement('div');
+    newSquare.classList.add('square');
+    newSquare.innerHTML = `<span>${number}</span>`;
+
+    //evento del colore sui quadrati
+    newSquare.addEventListener('click', function() {
+    this.classList.add('blue');
+    });
+    
+    return newSquare;
+};
+
