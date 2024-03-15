@@ -10,19 +10,15 @@ const mainGrid = document.querySelector('#grid');
 const mainButton = document.querySelector('#btn');
 console.log(mainButton)
 mainButton.addEventListener('click', function() {
+    //coloro il bottone e lo spengo
     this.classList.toggle('blue');
     document.getElementById("btn").disabled = true;
+    //creo la griglia facendo un ciclo 100 volte e appendendo alla griglia dei quadrati   
     for(let i = 1; i <= 100; i++) {
     const newSquare = generateSquare(i);
     mainGrid.append(newSquare);
 }
 });
-
-//creo la griglia facendo un ciclo 100 volte e appendendo alla griglia dei quadrati
-
-
-
-
 
 //funzione che crea un quadrato
 function generateSquare(number) {
