@@ -3,16 +3,23 @@
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
-
+//seleziono la griglia
 const mainGrid = document.querySelector('#grid');
-console.log(mainGrid);
 
-//creo la griglia facendo un ciclo 100 volte e appendendo alla griglia dei quadrati
-
-for(let i = 1; i <= 100; i++) {
+//seleziono il pulsante
+const mainButton = document.querySelector('#btn');
+console.log(mainButton)
+mainButton.addEventListener('click', function() {
+    this.classList.toggle('blue');
+    for(let i = 1; i <= 100; i++) {
     const newSquare = generateSquare(i);
     mainGrid.append(newSquare);
 }
+});
+
+//creo la griglia facendo un ciclo 100 volte e appendendo alla griglia dei quadrati
+
+
 
 
 
@@ -26,7 +33,7 @@ function generateSquare(number) {
     newSquare.addEventListener('click', function() {
     this.classList.add('blue');
     });
-    
+
     return newSquare;
 };
 
