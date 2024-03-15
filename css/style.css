@@ -49,3 +49,9 @@ header {
 .blue {
     background-color: aquamarine;
 }
+
+footer > div {
+ font-size: 30px;
+ color: aliceblue;
+padding-left: 20px;
+}
