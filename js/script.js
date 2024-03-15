@@ -11,6 +11,7 @@ const mainButton = document.querySelector('#btn');
 console.log(mainButton)
 mainButton.addEventListener('click', function() {
     this.classList.toggle('blue');
+    document.getElementById("btn").disabled = true;
     for(let i = 1; i <= 100; i++) {
     const newSquare = generateSquare(i);
     mainGrid.append(newSquare);
