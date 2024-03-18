@@ -29,6 +29,7 @@ function generateSquare(number) {
     //evento del colore sui quadrati
     newSquare.addEventListener('click', function() {
     this.classList.add('blue');
+    alert(number);
     });
 
     return newSquare;
